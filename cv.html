@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osama Mohammed Afzal - CV</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="icon" type="image/png" href="images/website-icon.png">
+    <style>
+        :root {
+            --primary: #2D3748;
+            --secondary: #4A5568;
+            --accent: #5A67D8;
+            --accent-light: #ebf4ff;
+            --text: #1A202C;
+            --text-light: #4A5568;
+            --light-bg: #F7FAFC;
+            --border: #E2E8F0;
+            --success: #48BB78;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            line-height: 1.5;
+            background-color: #fff;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+        
+        /* Header Section */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 20px;
+        }
+        
+        .header-left {
+            flex: 1;
+        }
+        
+        .name {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+        
+        .title {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--accent);
+            margin-bottom: 12px;
+            letter-spacing: 0.3px;
+        }
+        
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            font-size: 14px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+        
+        .contact-item:hover {
+            color: var(--accent);
+        }
+        
+        .icon {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+        
+        /* Summary */
+        .summary {
+            background-color: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--accent);
+        }
+        
+        /* Section Styling */
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .section-title::after {
+            content: "";
+            flex: 1;
+            height: 2px;
+            background-color: var(--border);
+            margin-left: 8px;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .skill-group {
+            margin-bottom: 16px;
+        }
+        
+        .skill-category {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--accent);
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .skill-items {
+            font-size: 14px;
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* Experience and Education */
+        .timeline-item {
+            margin-bottom: 24px;
+            position: relative;
+            padding-left: 24px;
+        }
+        
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--accent);
+        }
+        
+        .timeline-item:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 24px;
+            width: 2px;
+            height: calc(100% - 12px);
+            background-color: var(--border);
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6px;
+        }
+        
+        .company {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--primary);
+        }
+        
+        .location {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .position {
+            font-weight: 500;
+            font-size: 15px;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        
+        .date {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 10px;
+        }
+        
+        .responsibilities {
+            list-style-type: none;
+        }
+        
+        .responsibility {
+            font-size: 14px;
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 18px;
+        }
+        
+        .responsibility::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+        
+        /* Publications Section */
+        .publication {
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .publication:last-child {
+            border-bottom: none;
+        }
+        
+        .publication-title {
+            font-weight: 600;
+            font-size: 15px;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        
+        .publication-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .authors {
+            font-size: 14px;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        
+        .venue {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--accent);
+        }
+        
+        .pub-date {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .publication-description {
+            font-size: 14px;
+            color: var(--text);
+        }
+        
+        /* Awards */
+        .awards {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 12px 20px;
+            align-items: center;
+        }
+        
+        .award-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        
+        .award-location {
+            font-size: 14px;
+            color: var(--text-light);
+            font-style: italic;
+        }
+        
+        .award-year {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--accent);
+        }
+        
+        /* Tag styling */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 6px;
+        }
+        
+        .tag {
+            background-color: var(--accent-light);
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 500;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+        
+        /* Home link */
+        .home-link {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        .home-link a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .home-link a:hover {
+            color: var(--primary);
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                padding: 0;
+                font-size: 11pt;
+                color: black;
+            }
+            
+            .summary {
+                background-color: transparent;
+                border-left: 3px solid #666;
+                padding: 10px 15px;
+            }
+            
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            
+            .section, .timeline-item {
+                page-break-inside: avoid;
+            }
+            
+            .home-link {
+                display: none;
+            }
+            
+            #email-display span:after {
+                content: " → osama.afzal97@gmail.com";
+                font-family: 'Inter', sans-serif;
+            }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            
+            .header {
+                flex-direction: column;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .awards {
+                grid-template-columns: 1fr;
+            }
+            
+            .item-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <h1 class="name">Osama Mohammed Afzal</h1>
+            <p class="title">Machine Learning Engineer · NLP Researcher</p>
+            <div class="contact">
+                <a href="javascript:void(0)" class="contact-item" id="email-display" onclick="window.location.href='mailto:osama.afzal97@gmail.com'">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    <span>osama.afzal97 (at) gmail.com</span>
+                </a>
+                <a href="https://oafzal.com" target="_blank" class="contact-item">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    oafzal.com
+                </a>
+                <a href="https://github.com/oafzal97" target="_blank" class="contact-item">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.24.73-.53v-1.85c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.64.1-.64 1.04.07 1.58 1.06 1.58 1.06.92 1.53 2.33 1.07 2.9.83.1-.64.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 01.1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85V22c0 .28.18.6.73.52A11 11 0 0012 1.27"/></svg>
+                    github.com/oafzal97
+                </a>
+                <a href="tel:+4917636813367" class="contact-item">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1 1 0 00-1.02.24l-2.2 2.2a15.045 15.045 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM12 3v10l3-3h6V3h-9z"/></svg>
+                    (+49) 17636813367
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="summary">
+        <p>Specialized in large language models and NLP research with extensive experience in model optimization and deployment for production environments. Strong track record in fine-tuning LLMs up to 7B parameters, building multi-agent systems, and contributing to cutting-edge research in Arabic language models. Expertise in high-performance inference pipelines and scalable AI solutions, with publications in machine-generated text detection and propaganda analysis.</p>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-container">
+            <div class="skill-group">
+                <h3 class="skill-category">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+                    Programming Languages
+                </h3>
+                <p class="skill-items">Python, C/C++, SQL, Bash/Shell</p>
+            </div>
+            
+            <div class="skill-group">
+                <h3 class="skill-category">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 16.5l4-4h-3v-9h-2v9H8l4 4zm9-13h-6v1.99h6v14.03H3V5.49h6V3.5H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2v-14c0-1.1-.9-2-2-2z"/></svg>
+                    Development Tools
+                </h3>
+                <p class="skill-items">Git, GitLab, VS Code, Jupyter, Linux/Unix, Model Profiling Tools</p>
+            </div>
+            
+            <div class="skill-group">
+                <h3 class="skill-category">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+                    Machine Learning
+                </h3>
+                <div class="tags">
+                    <span class="tag">PyTorch</span>
+                    <span class="tag">HuggingFace</span>
+                    <span class="tag">DeepSpeed</span>
+                    <span class="tag">vLLM</span>
+                    <span class="tag">LLMs</span>
+                    <span class="tag">Accelerate</span>
+                    <span class="tag">NVIDIA Triton</span>
+                    <span class="tag">TGI</span>
+                    <span class="tag">LangGraph</span>
+                    <span class="tag">Model Optimization</span>
+                    <span class="tag">Distributed Training</span>
+                </div>
+            </div>
+            
+            <div class="skill-group">
+                <h3 class="skill-category">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM8 15c0-1.66 1.34-3 3-3 .35 0 .69.07 1 .18V6h5v2h-3v7.03c-.02 1.64-1.35 2.97-3 2.97-1.66 0-3-1.34-3-3z"/></svg>
+                    MLOps & Infrastructure
+                </h3>
+                <div class="tags">
+                    <span class="tag">Docker</span>
+                    <span class="tag">Kubernetes</span>
+                    <span class="tag">GCP</span>
+                    <span class="tag">GKE</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">SageMaker</span>
+                    <span class="tag">Model Serving</span>
+                    <span class="tag">CI/CD</span>
+                </div>
+            </div>
+            
+            <div class="skill-group">
+                <h3 class="skill-category">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+                    Human Languages
+                </h3>
+                <p class="skill-items">English (Professional), Urdu (Native), Arabic (Professional)</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Experience</h2>
+        
+        <div class="timeline-item">
+            <div class="item-header">
+                <div class="company">Ubiquitous Knowledge Processing (UKP) Lab</div>
+                <div class="location">Darmstadt, Germany</div>
+            </div>
+            <div class="position">NLP Research</div>
+            <div class="date">Nov. 2024 - Present</div>
+            <ul class="responsibilities">
+                <li class="responsibility">Conducting cutting-edge research on AI for Science, focusing on pre-training and post-training of LLMs</li>
+                <li class="responsibility">Developing novel architectures for agentic AI systems</li>
+            </ul>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="item-header">
+                <div class="company">ParseAI</div>
+                <div class="location">New York, United States (Remote)</div>
+            </div>
+            <div class="position">Machine Learning Engineer</div>
+            <div class="date">Oct. 2022 - Jun. 2024</div>
+            <ul class="responsibilities">
+                <li class="responsibility">Developed and fine-tuned open-source LLMs up to 7B parameters on a single A100 GPU using DeepSpeed-optimized infrastructure</li>
+                <li class="responsibility">Built high-throughput production deployment systems with DeepSpeed, vLLM, and HuggingFace TGI</li>
+                <li class="responsibility">Architected multi-agent LLM systems using LangGraph for advanced information extraction and document reasoning</li>
+                <li class="responsibility">Optimized model inference latency and throughput, achieving 3x performance improvements</li>
+            </ul>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="item-header">
+                <div class="company">Core42 – MBZUAI</div>
+                <div class="location">Abu Dhabi, UAE</div>
+            </div>
+            <div class="position">NLP Research Intern</div>
+            <div class="date">Mar. 2023 - Aug. 2023</div>
+            <ul class="responsibilities">
+                <li class="responsibility">Contributed to 'jais-13b-chat,' the first Arabic LLM, now available on Hugging Face</li>
+                <li class="responsibility">Conducted experiments with various prompt templates to optimize model effectiveness</li>
+                <li class="responsibility">Deployed models on FastChat platform, focusing on integration and operational efficiency</li>
+                <li class="responsibility">Implemented quantization techniques to optimize deployment strategies while maintaining performance</li>
+            </ul>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="item-header">
+                <div class="company">DCube Tech.</div>
+                <div class="location">Toronto, Canada (Remote)</div>
+            </div>
+            <div class="position">Machine Learning Engineer</div>
+            <div class="date">Jun. 2021 - Jul. 2022</div>
+            <ul class="responsibilities">
+                <li class="responsibility">Researched and implemented SOTA deep learning methods for information extraction from documents</li>
+                <li class="responsibility">Built automated CI/CD pipelines for training, evaluation, and deployment using DVC</li>
+                <li class="responsibility">Created annotation tools for object detection and entity tagging, increasing labeling efficiency by 40%</li>
+                <li class="responsibility">Deployed models as APIs for production on GCP, serving 1000+ requests per minute</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="timeline-item">
+            <div class="item-header">
+                <div class="company">Mohamed bin Zayed University of AI (MBZUAI)</div>
+                <div class="location">Abu Dhabi, UAE</div>
+            </div>
+            <div class="position">Master of Science in Natural Language Processing</div>
+            <div class="date">2022 - 2024</div>
+            <ul class="responsibilities">
+                <li class="responsibility">Supervisor: Preslav Nakov</li>
+                <li class="responsibility">Academic Excellence Award in NLP</li>
+            </ul>
+        </div>
+        
+        <div class="timeline-item">
+            <div class="item-header">
+                <div class="company">National University of Sciences & Technology (NUST)</div>
+                <div class="location">Islamabad, Pakistan</div>
+            </div>
+            <div class="position">Bachelor of Science in Computer Science</div>
+            <div class="date">2017 - 2021</div>
+            <ul class="responsibilities">
+                <li class="responsibility">CGPA: 3.53/4.00 (88%)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Selected Publications</h2>
+        
+        <div class="publication">
+            <h3 class="publication-title">M4: Multi-generator, Multi-domain, and Multi-lingual Black-Box Machine-Generated Text Detection</h3>
+            <div class="publication-meta">
+                <div class="authors">Yuxia Wang, Osama Mohammed Afzal, et al.</div>
+                <div>
+                    <span class="venue">EACL</span> • 
+                    <span class="pub-date">Mar 2024</span>
+                </div>
+            </div>
+            <p class="publication-description">Created a benchmark for detecting machine-generated texts across multiple generators, domains, and languages. Worked on data collection, generated text from various LLMs, and performed statistical analysis between human and machine generations.</p>
+        </div>
+        
+        <div class="publication">
+            <h3 class="publication-title">FRAPPE: FRAming, Persuasion, and Propaganda Explorer</h3>
+            <div class="publication-meta">
+                <div class="authors">Ahmed Sajwani, Osama Mohammed Afzal, et al.</div>
+                <div>
+                    <span class="venue">EACL</span> • 
+                    <span class="pub-date">Mar 2024</span>
+                </div>
+            </div>
+            <p class="publication-description">Led development of a system to detect framing, persuasion, and propaganda in news content. Implemented high-performance inference pipeline using NVIDIA Triton and quantized models, processing over 2 million news articles in hours.</p>
+        </div>
+        
+        <div class="publication">
+            <h3 class="publication-title">Jais and Jais-chat: Arabic-Centric Foundation and Instruction-Tuned LLMs</h3>
+            <div class="publication-meta">
+                <div class="authors">Neha Sengupta, Osama Mohammed Afzal, et al.</div>
+                <div>
+                    <span class="venue">Technical Report (Arxiv)</span> • 
+                    <span class="pub-date">Aug 2023</span>
+                </div>
+            </div>
+            <p class="publication-description">Introduced state-of-the-art Arabic-centric LLMs with 13 billion parameters, outperforming existing Arabic and multilingual models in knowledge and reasoning while remaining competitive in English.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Honors & Awards</h2>
+        
+        <div class="awards">
+            <div class="award-name">Participant, Dagstuhl: Reviewer No. 2: Old and New Problems in Peer Review</div>
+            <div class="award-location">Wadern, Germany</div>
+            <div class="award-year">2024</div>
+            
+            <div class="award-name">Participant, The 13th Lisbon Machine Learning School LxMLS</div>
+            <div class="award-location">Lisbon, Portugal</div>
+            <div class="award-year">2023</div>
+            
+            <div class="award-name">2nd Place, Pioneers 4.0: Hackathon by EDGE</div>
+            <div class="award-location">Abu Dhabi, UAE</div>
+            <div class="award-year">2023</div>
+        </div>
+    </section>
+    
+    <div class="home-link">
+        <a href="index.html">← Back to Homepage</a>
+    </div>
+
+    <!-- Simple script for email functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize email functionality
+            const emailElement = document.getElementById('email-display');
+            if (emailElement) {
+                emailElement.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.href = 'mailto:osama.afzal97@gmail.com';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
