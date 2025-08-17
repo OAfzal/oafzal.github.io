@@ -1,224 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Osama Mohammed Afzal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+    </nav>
 
-    <meta name="author" content="Osama Afzal" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <main>
+        <div class="profile">
+            <div class="profile-left">
+                <img src="profile.jpg" alt="Osama Mohammed Afzal" class="profile-photo">
+                <div class="profile-meta">
+                    <div class="meta-item">
+                        <strong>Education:</strong> Doctoral Researcher (TU Darmstadt), M.Sc. NLP/AI (MBZUAI)
+                    </div>
+                    <div class="meta-item">
+                        <strong>Research Interests:</strong> AI for Science, Machine-Generated Text Detection, NLP
+                    </div>
+                </div>
+                
+                <div class="links">
+                    <a href="mailto:osama.afzal@tu-darmstadt.de"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="cv.pdf"><i class="fas fa-file-pdf"></i> CV</a>
+                    <a href="https://scholar.google.com/citations?user=l37ta14AAAAJ&hl=en"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                    <a href="https://github.com/oafzal"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+            <div class="info">
+                <h1>Osama Mohammed Afzal</h1>
+                <p class="title">Doctoral Researcher at</p>
+                <p class="affiliation">UKP Lab, TU Darmstadt</p>
+                
+                <p class="bio">
+                    I am a Doctoral Researcher at the UKP Lab, TU Darmstadt, working on AI for Science research with <a href="https://www.informatik.tu-darmstadt.de/ukp/ukp_home/staff_ukp/prof_dr_iryna_gurevych/index.en.jsp" target="_blank">Professor Iryna Gurevych</a>. 
+                    I completed my Master's in NLP/AI at Mohamed bin Zayed University of AI (MBZUAI) in 2024, 
+                    where I worked with <a href="https://mbzuai.ac.ae/study/faculty/preslav-nakov/" target="_blank">Professor Preslav Nakov</a> on machine-generated text detection, 
+                    fact-checking, and multilingual NLP systems.
+                </p>
+                
+                <div class="news-section">
+                    <strong>News:</strong>
+                    <ul class="news-list">
+                        <li><i class="fas fa-file-alt"></i> Aug 2025: New preprint - <a href="https://ukplab.github.io/arxiv2025-assessing-paper-novelty/" target="_blank">"Beyond 'Not Novel Enough'"</a> <span class="new-label">New!</span></li>
+                        <li><i class="fas fa-search"></i> Jul 2025: Serving as Reviewer for EMNLP</li>
+                        <li><i class="fas fa-plane"></i> Nov 2024: Moved to Germany and joined UKP Lab, TU Darmstadt</li>
+                        <li><i class="fas fa-graduation-cap"></i> Jun 2024: Graduated with M.Sc. from MBZUAI</li>
+                        <li><i class="fas fa-rocket"></i> Aug 2022: Joined MBZUAI for M.Sc. in NLP/AI</li>
+                        <li><i class="fas fa-graduation-cap"></i> Jun 2021: Graduated from NUST with B.S. in Computer Science</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
-    <link rel="icon" type="image/png" href="images/website-icon.png" />
-  </head>
+        <section class="publications-section">
+            <h2>Publications</h2>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterYear('all')">All (13)</button>
+                <button class="filter-btn" onclick="filterYear('2025')">2025 (3)</button>
+                <button class="filter-btn" onclick="filterYear('2024')">2024 (7)</button>
+                <button class="filter-btn" onclick="filterYear('2023')">2023 (2)</button>
+                <button class="filter-btn" onclick="filterYear('2022')">2022 (1)</button>
+            </div>
+            
+            <div class="year-section" data-year="2025">
+                <h2 class="year">2025</h2>
+            
+            <div class="publication">
+                <div class="publication-image">
+                    <img src="assets/images/novelty_assessment.png" alt="Beyond 'Not Novel Enough': Enriching Scholarly Critique with LLM-Assisted Feedback">
+                </div>
+                <div class="publication-content">
+                    <h3 class="title">Beyond 'Not Novel Enough': Enriching Scholarly Critique with LLM-Assisted Feedback <span class="new-label">New!</span></h3>
+                    <p class="authors"><strong>Osama Mohammed Afzal</strong>, Drishti Sharma, Zhangir Azerbayev, Zachary S. Siegel, Daniel S. Weld, Iryna Gurevych</p>
+                    <p class="venue">arXiv Preprint 2025</p>
+                    <div class="links">
+                        <a href="https://ukplab.github.io/arxiv2025-assessing-paper-novelty/" target="_blank">paper</a>
+                        <a href="https://github.com/UKPLab/arxiv2025-assessing-paper-novelty" target="_blank">code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-image">
+                    <img src="assets/images/exploring_the_limitations_mgt.png" alt="Exploring the Limitations of Detecting Machine-Generated Text">
+                </div>
+                <div class="publication-content">
+                    <h3 class="title">Exploring the Limitations of Detecting Machine-Generated Text</h3>
+                    <p class="authors">Jad Doughman, <strong>Osama Mohammed Afzal</strong>, Hawau Olamide Toyin, Shady Shehata, Preslav Nakov, Zeerak Talat</p>
+                    <p class="venue">COLING 2025</p>
+                    <div class="links">
+                        <a href="https://aclanthology.org/2025.coling-main.288/" target="_blank">paper</a>
+                        <a href="#" target="_blank">code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-image">
+                    <img src="assets/images/genai_detection_task.png.png" alt="GenAI Content Detection Task 1">
+                </div>
+                <div class="publication-content">
+                    <h3 class="title">GenAI Content Detection Task 1: English and Multilingual Machine-Generated Text Detection: AI vs. Human</h3>
+                    <p class="authors">Yuxia Wang, Artem Shelmanov, Jonibek Mansurov, Akim Tsvigun, Vladislav Mikhailov, Rui Xing, Zhuohan Xie, Jiahui Geng, Giovanni Puccetti, Ekaterina Artemova, Jinyan Su, Minh Ngoc Ta, Mervat Abassy, Kareem Ashraf Elozeiri, Saad El Dine Ahmed El Etter, Maiya Goloburda, Tarek Mahmoud, Raj Vardhan Tomar, Nurkhan Laiyk, <strong>Osama Mohammed Afzal</strong>, Ryuto Koike, Masahiro Kaneko, Alham Fikri Aji, Nizar Habash, Iryna Gurevych, Preslav Nakov</p>
+                    <p class="venue">COLING Workshops 2025</p>
+                    <div class="links">
+                        <a href="https://aclanthology.org/2025.genaidetect-1.27/" target="_blank">paper</a>
+                        <a href="#" target="_blank">code</a>
+                    </div>
+                </div>
+            </div>
+            </div>
 
-  <body>
-    <table
-      style="
-        width: 100%;
-        max-width: 800px;
-        border: 0px;
-        border-spacing: 0px;
-        border-collapse: separate;
-        margin-right: auto;
-        margin-left: auto;
-      "
-    >
-      <tbody>
-        <tr style="padding: 0px">
-          <td style="padding: 0px">
-            <table
-              style="
-                width: 100%;
-                border: 0px;
-                border-spacing: 0px;
-                border-collapse: separate;
-                margin-right: auto;
-                margin-left: auto;
-              "
-            >
-              <tbody>
-                <tr style="padding: 0px">
-                  <td style="padding: 2.5%; width: 63%; vertical-align: middle">
-                    <p style="text-align: center">
-                      <name>Osama Mohammed Afzal</name>
-                    </p>
-                    <p>
-                      I am a Graduate Student studying NLP at
-                      <a target="_blank" href="https://mbzuai.ac.ae/"
-                        >Mohamed bin Zayed University of Artificial
-                        Intelligence</a
-                      >
-                      under the supervision of
-                      <a
-                        target="_blank"
-                        href="https://scholar.google.com/citations?user=DfXsKZ4AAAAJ&hl=en"
-                        >Prof. Preslav Nakov</a
-                      >. I am currently working on Fake News and Propaganda
-                      Detection.
-                    </p>
+            <div class="year-section" data-year="2024">
+                <h2 class="year">2024</h2>
+            
+            <div class="publication">
+                <div class="publication-image">
+                    <img src="assets/images/factcheck-bench.png" alt="Factcheck-Bench">
+                </div>
+                <div class="publication-content">
+                    <h3 class="title">Factcheck-Bench: Fine-Grained Evaluation Benchmark for Automatic Fact-checkers</h3>
+                    <p class="authors">Yuxia Wang, Revanth Gangi Reddy, Zain Muhammad Mujahid, Arnav Arora, Aleksandr Rubashevskii, Jiahui Geng, <strong>Osama Mohammed Afzal</strong>, Liangming Pan, Nadav Borenstein, Aditya Pillai, Isabelle Augenstein, Iryna Gurevych, Preslav Nakov</p>
+                    <p class="venue">EMNLP 2024 (Findings)</p>
+                    <div class="links">
+                        <a href="https://doi.org/10.18653/v1/2024.findings-emnlp.830" target="_blank">paper</a>
+                        <a href="#" target="_blank">code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-image">
+                    <img src="assets/images/llm_detectaive.png" alt="LLM-DetectAIve">
+                </div>
+                <div class="publication-content">
+                    <h3 class="title">LLM-DetectAIve: a Tool for Fine-Grained Machine-Generated Text Detection</h3>
+                    <p class="authors">Mervat Abassy, Kareem Elozeiri, Alexander Aziz, Minh Ngoc Ta, Raj Vardhan Tomar, Nurkhan Laiyk, <strong>Osama Mohammed Afzal</strong>, Yuxia Wang, Jonibek Mansurov, Zhengzhong Liu, Artem Shelmanov, Akim Tsvigun, Nizar Habash, Firoj Alam, Preslav Nakov</p>
+                    <p class="venue">EMNLP 2024 (Demo)</p>
+                    <div class="links">
+                        <a href="https://aclanthology.org/2024.emnlp-demo.35/" target="_blank">paper</a>
+                        <a href="#" target="_blank">demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-image">
+                    <img src="assets/images/m4gt_bench.png" alt="M4GT-Bench">
+                </div>
+                <div class="publication-content">
+                    <h3 class="title">M4GT-Bench: Evaluation Benchmark for Black-Box Machine-Generated Text Detection</h3>
+                    <p class="authors">Yuxia Wang, Jonibek Mansurov, Petar Ivanov, Jinyan Su, Artem Shelmanov, Akim Tsvigun, <strong>Osama Mohammed Afzal</strong>, Tarek Mahmoud, Giovanni Puccetti, Thomas Arnold, Alham Fikri Aji, Nizar Habash, Iryna Gurevych, Preslav Nakov</p>
+                    <p class="venue">ACL 2024</p>
+                    <div class="links">
+                        <a href="https://doi.org/10.18653/v1/2024.acl-long.218" target="_blank">paper</a>
+                        <a href="https://github.com/mbzuai-nlp/M4GT-Bench" target="_blank">code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-image">
+                    <img src="assets/images/semeval2024_task8.png" alt="SemEval-2024 Task 8">
+                </div>
+                <div class="publication-content">
+                    <h3 class="title">SemEval-2024 Task 8: Multidomain, Multimodel and Multilingual Machine-Generated Text Detection</h3>
+                    <p class="authors">Yuxia Wang, Jonibek Mansurov, Petar Ivanov, Jinyan Su, Artem Shelmanov, Akim Tsvigun, <strong>Osama Mohammed Afzal</strong>, Tarek Mahmoud, Giovanni Puccetti, Thomas Arnold</p>
+                    <p class="venue">SemEval@NAACL 2024</p>
+                    <div class="links">
+                        <a href="https://doi.org/10.18653/v1/2024.semeval-1.279" target="_blank">paper</a>
+                        <a href="https://github.com/mbzuai-nlp/SemEval2024-task8" target="_blank">code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-image">
+                    <img src="assets/images/frappe_demo.png" alt="FRAPPE Demo">
+                </div>
+                <div class="publication-content">
+                    <h3 class="title">FRAPPE: FRAming, Persuasion, and Propaganda Explorer</h3>
+                    <p class="authors">Ahmed Sajwani, Alaa Elsetohy, Ali Mekky, Diana Turmakhan, Lara Hassan, Mohamed El Zeftawy, Omar El Herraoui, <strong>Osama Mohammed Afzal</strong>, Qisheng Liao, Tarek Mahmoud</p>
+                    <p class="venue">EACL 2024 (Demo)</p>
+                    <div class="links">
+                        <a href="https://aclanthology.org/2024.eacl-demo.22" target="_blank">paper</a>
+                        <a href="#" target="_blank">demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-image">
+                    <img src="assets/images/m4.png" alt="M4 Detection">
+                </div>
+                <div class="publication-content">
+                    <h3 class="title">M4: Multi-generator, Multi-domain, and Multi-lingual Black-Box Machine-Generated Text Detection</h3>
+                    <p class="authors">Yuxia Wang, Jonibek Mansurov, Petar Ivanov, Jinyan Su, Artem Shelmanov, Akim Tsvigun, Chenxi Whitehouse, <strong>Osama Mohammed Afzal</strong>, Tarek Mahmoud, Toru Sasaki, Thomas Arnold, Alham Fikri Aji, Nizar Habash, Iryna Gurevych, Preslav Nakov</p>
+                    <p class="venue">EACL 2024</p>
+                    <div class="links">
+                        <a href="https://aclanthology.org/2024.eacl-long.83" target="_blank">paper</a>
+                        <a href="https://github.com/mbzuai-nlp/M4" target="_blank">code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-image">
+                    <img src="assets/images/what_can_nlp_do_for_peerreview.png" alt="What Can Natural Language Processing Do for Peer Review?">
+                </div>
+                <div class="publication-content">
+                    <h3 class="title">What Can Natural Language Processing Do for Peer Review?</h3>
+                    <p class="authors">Ilia Kuznetsov, <strong>Osama Mohammed Afzal</strong>, Koen Dercksen, Nils Dycke, Alexander Goldberg, Tom Hope, Dirk Hovy, Jonathan K. Kummerfeld, Anne Lauscher, Kevin Leyton-Brown, Sheng Lu, Mausam, Margot Mieskes, Aurélie Névéol, Danish Pruthi, Lizhen Qu, Roy Schwartz, Noah A. Smith, Thamar Solorio, Jingyan Wang, Xiaodan Zhu, Anna Rogers, Nihar B. Shah, Iryna Gurevych</p>
+                    <p class="venue">arXiv Preprint 2024 (Dagstuhl Position Paper)</p>
+                    <div class="links">
+                        <a href="https://arxiv.org/abs/2405.06563" target="_blank">paper</a>
+                        <a href="https://www.dagstuhl.de/seminars/seminar-calendar/seminar-details/24052" target="_blank">dagstuhl</a>
+                    </div>
+                </div>
+            </div>
+            </div>
 
-                    <p>
-                      After completing my undergrad I worked for a startup named
-                      <a
-                        target="_blank"
-                        target="_blank"
-                        href="https://www.phelix.ai/"
-                        >Phelix.ai</a
-                      >
-                      as a Machine Learning Engineer working primarily on
-                      building an end to end Machine Learning Pipeline to be
-                      deployed on Google Cloud Platform. I also worked on
-                      setting up the base for a MLOps pipeline to account for
-                      data drift.
-                    </p>
+            <div class="year-section" data-year="2023">
+                <h2 class="year">2023</h2>
+            
+            <div class="publication">
+                <div class="publication-image">
+                    <img src="assets/images/teamsyllogist.png.png" alt="Team TheSyllogist">
+                </div>
+                <div class="publication-content">
+                    <h3 class="title">Team TheSyllogist at SemEval-2023 Task 3: Language-Agnostic Framing Detection in Multi-Lingual Online News: A Zero-Shot Transfer Approach</h3>
+                    <p class="authors"><strong>Osama Mohammed Afzal</strong>, Preslav Nakov</p>
+                    <p class="venue">SemEval@ACL 2023</p>
+                    <div class="links">
+                        <a href="https://doi.org/10.18653/v1/2023.semeval-1.283" target="_blank">paper</a>
+                        <a href="#" target="_blank">code</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="publication">
+                <div class="publication-image">
+                    <img src="assets/images/jais.jpeg" alt="Jais and Jais-chat">
+                </div>
+                <div class="publication-content">
+                    <h3 class="title">Jais and Jais-chat: Arabic-Centric Foundation and Instruction-Tuned Open Generative Large Language Models</h3>
+                    <p class="authors">Neha Sengupta, Sunil Kumar Sahu, Bokang Jia, Satheesh Katipomu, Haonan Li, Fajri Koto, William Marshall, Gurpreet Gosal, Cynthia Liu, Zhiming Chen, <strong>Osama Mohammed Afzal</strong>, Samta Kamboj, Onkar Pandit, Rahul Pal, Lalit Pradhan, Zain Muhammad Mujahid, Massa Baali, Xudong Han, Sondos Mahmoud Bsharat, Alham Fikri Aji, Zhiqiang Shen, Zhengzhong Liu, Natalia Vassilieva, Joel Hestness, Andy Hock, Andrew Feldman, Jonathan Lee, Andrew Jackson, Hector Xuguang Ren, Preslav Nakov, Timothy Baldwin, Eric Xing</p>
+                    <p class="venue">arXiv Preprint 2023</p>
+                    <div class="links">
+                        <a href="https://arxiv.org/abs/2308.16149" target="_blank">paper</a>
+                        <a href="#" target="_blank">code</a>
+                    </div>
+                </div>
+            </div>
+            </div>
 
-                    <p>
-                      I did my undergraduate from National University of
-                      Sciences & Technology (NUST), Islamabad working in
-                      TUKL-NUST R&D Lab and was advised by
-                      <a
-                        target="_blank"
-                        href="https://scholar.google.com/citations?user=o9RCNZYAAAAJ&hl=en"
-                        >Dr. Faisal Shafait</a
-                      >
-                      on Document Analysis.
-                    </p>
-                    <p style="text-align: center">
-                      <a target="_blank" href="mailto:osama.afzal@mbzuai.ac.ae"
-                        >Email</a
-                      >
-                      &nbsp/&nbsp <a href="cv.html">CV</a> &nbsp/&nbsp
-                      <a
-                        target="_blank"
-                        href="https://scholar.google.com/citations?user=wosO_eEAAAAJ&hl=en"
-                        >Google Scholar</a
-                      >
-                      &nbsp/&nbsp
-                      <a target="_blank" href="https://twitter.com/oafzal2"
-                        >Twitter</a
-                      >
-                      &nbsp/&nbsp
-                      <a target="_blank" href="https://github.com/oafzal/"
-                        >Github</a
-                      >
-                    </p>
-                  </td>
-                  <td style="padding: 2.5%; width: 40%; max-width: 40%">
-                    <a target="_blank" href="images/pic.png"
-                      ><img
-                        style="width: 100%; max-width: 100%"
-                        alt="profile photo"
-                        src="images/pic.png"
-                        class="hoverZoomLink"
-                    /></a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <table
-              style="
-                width: 100%;
-                border: 0px;
-                border-spacing: 0px;
-                border-collapse: separate;
-                margin-right: auto;
-                margin-left: auto;
-              "
-            >
-              <tbody>
-                <tr>
-                  <heading>Research</heading>
-                  <td
-                    style="padding: 20px; width: 100%; vertical-align: middle"
-                  >
-                    <p>
-                      I'm interested in working on Fake News Detection,
-                      Propaganda Detection, and self-supervised learning
-                      techniques.
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <table
-              style="
-                width: 100%;
-                border: 0px;
-                border-spacing: 0px;
-                border-collapse: separate;
-                margin-right: auto;
-                margin-left: auto;
-              "
-            >
-              <tbody>
-                <heading>Papers</heading>
-                <tr>
-                  <td style="padding: 20px; width: 25%; vertical-align: middle">
-                    <img
-                      src="images/paper_gaze.png"
-                      alt="b3do"
-                      width="160"
-                      style="border-style: none"
-                    />
-                  </td>
-                  <td width="75%" valign="middle">
-                    <a
-                      target="_blank"
-                      href="https://arxiv.org/pdf/2202.02764.pdf"
-                    >
-                      <papertitle
-                        >On Smart Gaze based Annotation of Histopathology Images
-                        for Training of Deep Convolutional Neural
-                        Networks</papertitle
-                      >
-                    </a>
-                    <br />
-                    K. Mariam,
-                    <strong>Osama Mohammed Afzal</strong>, W. Hussain, M. U.
-                    Javed, A. Kiyani, N. Rajpoot, S. A. Khurram, H. A. Khan
-                    <br />
-                    <em
-                      >IEEE Journal of Biomedical and Health Informatics, vol.
-                      26, no. 7, pp. 3025-3036</em
-                    >, July 2022
-                    <br />
-                    <p>
-                      This work explores the viability of annotating
-                      histopathology data with a person's gaze compared to
-                      conventional hand-based annotation for object detection
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="year-section" data-year="2022">
+                <h2 class="year">2022</h2>
+            
+            <div class="publication">
+                <div class="publication-image">
+                    <img src="assets/images/smart_gaze.png" alt="On Smart Gaze Based Annotation of Histopathology Images">
+                </div>
+                <div class="publication-content">
+                    <h3 class="title">On Smart Gaze Based Annotation of Histopathology Images for Training of Deep Convolutional Neural Networks</h3>
+                    <p class="authors">Komal Mariam, <strong>Osama Mohammed Afzal</strong>, Wajahat Hussain, Muhammad Umar Javed, Amber Kiyani, Nasir Rajpoot, Syed Ali Khurram, Hassan Aqeel Khan</p>
+                    <p class="venue">IEEE Journal of Biomedical and Health Informatics 2022</p>
+                    <div class="links">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9706338" target="_blank">paper</a>
+                        <a href="#" target="_blank">code</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
 
-            <table
-              style="
-                width: 100%;
-                border: 0px;
-                border-spacing: 0px;
-                border-collapse: separate;
-                margin-right: auto;
-                margin-left: auto;
-              "
-            >
-              <tbody>
-                <tr>
-                  <td style="padding: 0px">
-                    <br />
-                    <p style="text-align: center; font-size: small">
-                      <a target="_blank" href="https://jonbarron.info/"
-                        >&#10025;</a
-                      >
-                    </p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+
+    </main>
+</body>
 </html>
