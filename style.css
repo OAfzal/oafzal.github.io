@@ -73,6 +73,23 @@ nav a:hover {
     margin-bottom: 5px;
 }
 
+.interest-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.interest-tag {
+    padding: 4px 8px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #333;
+    background-color: transparent;
+    font-weight: 500;
+}
+
 .news-section {
     margin-top: 20px;
 }
