@@ -118,6 +118,49 @@ nav a:hover {
     width: 16px;
 }
 
+.countries-section {
+    margin-top: 20px;
+}
+
+.countries-section strong {
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.country-flags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.flag-item {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.flag-item:hover {
+    transform: scale(1.2);
+}
+
+.flag-item:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    z-index: 1000;
+    margin-bottom: 5px;
+}
+
 .info h1 {
     font-size: 2rem;
     margin-bottom: 5px;
